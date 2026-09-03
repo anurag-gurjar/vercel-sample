@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vercel Launchpad | Sample Site</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <svg class="vercel-icon" viewBox="0 0 75 65" height="22" width="26" fill="currentColor">
+        <path d="M37.5 0L75 65H0z"/>
+      </svg>
+      <span>VercelReady</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#deploy-steps">How to Deploy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#deploy-steps" class="btn btn-secondary">Get Started</a>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="badge">
+        <span class="pulse-dot"></span> Ready to Deploy on Vercel
+      </div>
+      <h1 class="hero-title">
+        Deploy Your Ideas to the <span class="gradient-text">Edge in Seconds</span>
+      </h1>
+      <p class="hero-subtitle">
+        This is a lightweight, ultra-fast sample website built to help you master deploying modern web applications to Vercel with zero hassle.
+      </p>
+      <div class="hero-cta">
+        <a href="#deploy-steps" class="btn btn-primary">
+          <span>Deploy Instructions</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <button id="confetti-btn" class="btn btn-glass">
+          🎉 Click to Celebrate
+        </button>
+      </div>
+
+      <!-- Interactive Status Card -->
+      <div class="hero-card">
+        <div class="card-header">
+          <div class="traffic-lights">
+            <span class="light red"></span>
+            <span class="light yellow"></span>
+            <span class="light green"></span>
+          </div>
+          <span class="terminal-title">live-deployment-status.json</span>
+        </div>
+        <div class="card-body">
+          <pre><code>{
+  <span class="key">"project"</span>: <span class="string">"sample-vercel-website"</span>,
+  <span class="key">"framework"</span>: <span class="string">"Static HTML/CSS/JS"</span>,
+  <span class="key">"status"</span>: <span class="status-live">"Ready For Production"</span>,
+  <span class="key">"clicks_registered"</span>: <span id="click-count">0</span>,
+  <span class="key">"deployment_time"</span>: <span class="string">"&lt; 30 seconds"</span>
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+      <div class="section-heading">
+        <h2>Why Deploy on <span class="gradient-text">Vercel</span>?</h2>
+        <p>Built for frontend developers who value speed, reliability, and automated workflows.</p>
+      </div>
+
+      <div class="grid cards-grid">
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Instant Global CDN</h3>
+          <p>Your static assets and edge functions are cached worldwide across 100+ points of presence for blazing speeds.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔄</div>
+          <h3>Git Integration</h3>
+          <p>Every Git push to your repository triggers an automatic preview or production deployment with unique URLs.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <h3>Automatic Free SSL</h3>
+          <p>Vercel provides automatic SSL certificate generation and renewal for every custom domain with zero config.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step by step deployment guide -->
+    <section id="deploy-steps" class="section">
+      <div class="section-heading">
+        <h2>How to Deploy This Project</h2>
+        <p>Pick either the beginner-friendly web method or the quick command-line method.</p>
+      </div>
+
+      <div class="steps-wrapper">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Option A: Deploy via GitHub (Recommended)</h3>
+            <ol>
+              <li>Upload or push this project folder to a new repository on <strong>GitHub</strong>.</li>
+              <li>Go to <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a> and sign in with GitHub.</li>
+              <li>Click <strong>"Add New..." &rarr; "Project"</strong> and select your GitHub repository.</li>
+              <li>Click <strong>"Deploy"</strong>. Within 20 seconds, your site is live!</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Option B: Deploy via Vercel CLI (Fastest)</h3>
+            <ol>
+              <li>Open your terminal in this directory.</li>
+              <li>Run <code>npx vercel</code>.</li>
+              <li>Follow the quick prompts (Log in, accept defaults by pressing Enter).</li>
+              <li>Your live URL will be generated instantly in your terminal!</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Quote / Tip Box -->
+    <section id="faq" class="section interactive-tip">
+      <div class="tip-card">
+        <h3>💡 Pro Vercel Tip</h3>
+        <p id="tip-text">"Whenever you push code to a Git branch, Vercel creates an isolated Preview Deployment with a unique URL so you can test before merging!"</p>
+        <button id="next-tip-btn" class="btn btn-secondary">Next Tip</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Created to help you learn Vercel deployment. Fast, modern &amp; responsive.</p>
+    <p class="copyright">&copy; 2026 Sample Vercel Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

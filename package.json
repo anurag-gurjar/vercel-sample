@@ -1,0 +1,12 @@
+{
+  "name": "vercel-sample-site",
+  "version": "1.0.0",
+  "description": "A lightweight sample site designed to learn Vercel deployment.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["vercel", "deployment", "starter"],
+  "author": "",
+  "license": "MIT"
+}
